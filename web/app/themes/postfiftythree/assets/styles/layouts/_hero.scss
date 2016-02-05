@@ -1,0 +1,74 @@
+.container-hero {
+  // padding-top: 41px;
+  @include outer-container();
+  background-color: $grey-700;
+}
+
+.hero {
+  overflow: hidden;
+  height: 500px;
+  position: relative;
+  z-index: 0;
+  @include media ( max-width $break-medium ) {
+    background-size: cover;
+    overflow: hidden;
+    video {
+      display: none;
+    }
+  }
+  .hero-video {
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    margin-top: 0px;
+    @include media ( min-width $break-medium ) {
+        margin-top: -80px;
+    }
+  }
+  .video-overlay {
+    position:absolute;
+    top: 30px;
+    left:10px;
+    @include media ( min-width $break-medium ) {
+      left:40px;
+        top:80px;
+    }
+    @include media ( min-width $break-large ) {
+      left:40px;
+        top:80px;
+    }
+    @include media ( max-width $break-medium ) {
+      h1 {
+        font-size: 1.625em;
+      }
+    }
+    h1 {
+        color: $white;
+    }
+
+    p {
+      color: $grey-50;
+      a {
+        color: $highlight;
+      }
+    }
+    @include span-columns(10);
+    @include shift(0);
+    @include clearfix();
+    @include media ( min-width $break-medium ) {
+      @include span-columns(8);
+      @include shift(0);
+    }
+  }
+  img {
+    @include media ( max-width $break-medium ) {
+      // background-image: url(dist/images/backup-image.jpg);
+      // background-size: cover;
+      object-fit: cover;
+      min-width: 100%;
+      height: 500px;
+      overflow-x: auto;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.container-blog {
+  // padding-top: 41px;
+  @include span-columns(10);
+  @include shift(1);
+  @include media ( min-width $break-medium ) {
+    @include span-columns(8);
+    @include shift(2);
+  }
+}
+
+.blog-item {
+  p {
+    padding-bottom: 4em;
+  }
+}

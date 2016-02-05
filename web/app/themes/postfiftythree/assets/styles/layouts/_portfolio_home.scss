@@ -1,0 +1,36 @@
+.container-portfolio-home {
+    border-top: 2px solid #ffffff;
+  @include outer-container();
+  @include clearfix;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  background-color: $grey-500;
+
+}
+
+.portfolio-home {
+  @include clearfix;
+    .portfolio-item {
+      background-color: $grey-50;
+      margin-bottom: 10px;
+      @include span-columns(12);
+      @include omega(1n);
+      @include media ( min-width $break-medium ) {
+        @include omega-reset(1n);
+        @include span-columns(6);
+        @include omega(2n);
+      }
+      @include media ( min-width $break-large ) {
+        @include omega-reset(2n);
+        @include span-columns(4);
+        @include omega(3n);
+    }
+  }
+}
+
+.portfolio-header {
+  padding-left: 20px;
+  @include span-columns(10);
+  h2 {color: $grey-100;}
+}

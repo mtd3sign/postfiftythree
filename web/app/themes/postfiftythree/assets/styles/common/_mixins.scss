@@ -1,0 +1,12 @@
+@mixin typography ($font, $size, $weight, $color) {
+  font-family: $font;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+};
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  transform: translateY(-50%);
+};

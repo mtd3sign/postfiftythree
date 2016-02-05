@@ -1,0 +1,16 @@
+body {
+  @include outer-container(100%);
+  background-color: $white;
+  margin: 0;
+}
+
+#container {
+  @include outer-container($max-width);
+  background-color: $white;
+  padding-top: 58px;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.main {
+  @include span-columns(12);
+}
