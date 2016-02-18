@@ -1,10 +1,15 @@
 .container-hero {
   // padding-top: 41px;
-  @include outer-container();
-  background-color: $grey-700;
+  width: 100%;
+  background-color: #000000;
+}
+
+.hero-outer {
+  @include outer-container($max-width);
 }
 
 .hero {
+  text-align: center;
   overflow: hidden;
   height: 500px;
   position: relative;
@@ -15,6 +20,22 @@
     video {
       display: none;
     }
+  }
+  // .logo {
+  //   position: absolute;
+  //   top: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   right: 0;
+  //   margin: auto;
+  //   height: 400px;
+  //   width: 400px;
+  //   opacity: 0.8;
+  // }
+  .logo {
+    height: 50px;
+    width: 50px;
+    opacity: 0.8;
   }
   .hero-video {
     left: 0;
@@ -27,15 +48,24 @@
     }
   }
   .video-overlay {
+    text-align: center;
+    left: 0;
+    right: 0;
+    margin: auto;
     position:absolute;
     top: 30px;
-    left:10px;
+    @include span-columns(10);
+    @include shift(1);
+    @include clearfix();
     @include media ( min-width $break-medium ) {
-      left:40px;
+      text-align: center;
+      // left:40px;
         top:80px;
+        @include span-columns(8);
+        @include shift(2);
     }
     @include media ( min-width $break-large ) {
-      left:40px;
+      // left:40px;
         top:80px;
     }
     @include media ( max-width $break-medium ) {
@@ -43,8 +73,18 @@
         font-size: 1.625em;
       }
     }
+    .logo {
+      width: 80px;
+      height: 80px;
+      @include media ( min-width $break-medium ) {
+        display: none;
+      }
+    }
     h1 {
-        color: $white;
+        color: $grey-50;
+        @include media ( max-width $break-medium ) {
+          display: none;
+        }
     }
 
     p {
@@ -53,15 +93,8 @@
         color: $highlight;
       }
     }
-    @include span-columns(10);
-    @include shift(0);
-    @include clearfix();
-    @include media ( min-width $break-medium ) {
-      @include span-columns(8);
-      @include shift(0);
-    }
   }
-  img {
+  img .hero-img {
     @include media ( max-width $break-medium ) {
       // background-image: url(dist/images/backup-image.jpg);
       // background-size: cover;

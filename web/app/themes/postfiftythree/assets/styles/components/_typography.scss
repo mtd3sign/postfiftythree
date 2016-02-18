@@ -100,6 +100,18 @@ header.sticky {
     }
 }
 
+.title-highlight {
+  color: $orange-A100;
+}
+
+.title-dark {
+  color: $grey-800;
+}
+
+.title-medium {
+  color: $grey-600;
+}
+
 
 
 //  @include media ( min-width $text-medium ) {

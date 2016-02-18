@@ -6,6 +6,16 @@
       ],
       "main": true
     },
+    "sss.js": {
+      "files": [
+        "scripts/sss.js"
+      ]
+    },
+    "flexslider.js": {
+      "files": [
+        "scripts/flexslider.js"
+      ]
+    },
     "main.css": {
       "files": [
         "styles/main.scss"

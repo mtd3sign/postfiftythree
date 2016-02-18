@@ -36,6 +36,5 @@ use Roots\Sage\Wrapper;
       wp_footer();
     ?>
   </div><!-- /.content -->
-
   </body>
 </html>

@@ -1,0 +1,39 @@
+.container-footer {
+  border-top: 2px solid #ffffff;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: $grey-800;
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer-items li,
+.copyright {
+  display: inline-block;
+  font-family: "brandon-grotesque", sans-serif;
+  font-size: 0.8em;
+  font-weight: 400;
+  color: $grey-500;
+  line-height: 1.25em;
+  @include media ( min-width $text-medium ) {
+    line-height: 1.375em;
+  }
+}
+
+.footer-items a li {
+  &:hover {
+    color: $orange-A100;
+  }
+}
+
+
+.footer hr {
+  border-bottom: 1px solid $grey-500;;
+  margin: 20px auto 10px;;
+  width: 12em;
+}

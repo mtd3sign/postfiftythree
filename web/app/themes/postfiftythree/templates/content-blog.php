@@ -1,4 +1,6 @@
+<div class="container-blog-home">
 
+  <div class="blog-home">
 
   <?php
 
@@ -10,7 +12,6 @@
   $query = new WP_Query($args);
 
   ?>
-    <div class="blog-item">
 
     <?php
         // The Loop
@@ -20,6 +21,7 @@
                 echo '<div class="blog-item">';
                 echo '<h2><a href="'.get_the_permalink().'">'.get_the_title().'</a></h2>';
                 echo '<p>'.get_the_excerpt().'</p>';
+                echo '<p class="blog-date">'.get_the_date().'</p>';
 
                 // $image = get_field('image');
                 $image = 'https://unsplash.it/200/300/?random';
@@ -38,4 +40,5 @@
 
         ?>
 
-  </div>
+</div>
+</div>

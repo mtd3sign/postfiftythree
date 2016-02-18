@@ -71,7 +71,7 @@
     }
   };
 
-  // Load Events 
+  // Load Events
   $(document).ready(UTIL.loadEvents);
 
 })(jQuery); // Fully reference jQuery after this point.
@@ -104,3 +104,7 @@ if ($(this).scrollTop() > 1){
     $('header').removeClass("sticky");
   }
 });
+
+/* ========================================================================
+ * Slider
+ * ======================================================================== */

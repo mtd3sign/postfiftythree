@@ -55,13 +55,18 @@ header {
 }
 
 header.sticky {
-  height: 56px;
+  height: 58px;
 	transition-property: background-color .5s ease;
 	-moz-transition: background-color .5s ease;
 	-webkit-transition: background-color .5s ease;
 	-o-transition: background-color .5s ease;
 	background-color: $grey-300;
-	border-bottom: 2px solid $grey-700;
+	border-bottom: 2px solid $white;
+	nav ul li a {
+	  &:hover {
+			border-bottom: 0;
+		}
+	}
 }
 
 .nav-primary {
@@ -81,6 +86,9 @@ header.sticky {
 	top:5px;
 	z-index:999;
 	font-size:30px;
+	@include media ( min-width $break-medium ) {
+		display: none;
+	}
 }
 .button a {
 	text-decoration:none;
@@ -225,7 +233,7 @@ header.sticky {
 		border-bottom:1px solid #575757;
 	}
 	.wrap ul.wrap-nav {
-		padding:30px 0px 0px;
+		padding: 0px
 	}
 	nav ul {
 		opacity:0;

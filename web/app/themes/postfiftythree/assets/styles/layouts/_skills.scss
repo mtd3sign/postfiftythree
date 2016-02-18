@@ -1,15 +1,29 @@
+// .skills-outer {
+//   @include clearfix;
+//   width: 100%;
+//   margin-top: 20px;
+// }
+
 .skills-outer {
   @include clearfix;
-  @include span-columns(12);
+  @include outer-container();
   @include shift(0);
   margin-top: 20px;
 }
 
+.skills {
+  @include outer-container();
+  @include clearfix;
+  border-top: 2px solid #ffffff;
+}
+
 .skills-outer-design {
+    width: 100%;
   background-color: $grey-700;
 }
 
 .skills-outer-development {
+    width: 100%;
   background-color: $grey-300;
 }
 
@@ -56,9 +70,4 @@
   @include media(min-width $break-medium) {
     @include span-columns(6);
   }
-}
-
-.skills {
-  @include clearfix;
-  border-top: 2px solid #ffffff;
 }

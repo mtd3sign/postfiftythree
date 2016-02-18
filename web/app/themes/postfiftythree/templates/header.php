@@ -1,6 +1,9 @@
 <header>
   <!-- <div class="space"></div> -->
     <!--    <a class="brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a> -->
+    <div class="logo">
+        <a class="brand" href="<?= esc_url(home_url('/')); ?>"><img class="logo" src="<?php bloginfo('template_directory'); ?>/dist/images/postfiftythree-logo-circle-grey-50.png" title="POSTFIFTYTHREE logo" /></a>
+    </div>
     <nav class="nav-primary">
       <?php
       if (has_nav_menu('primary_navigation')) :
@@ -14,6 +17,7 @@
     </div>
     <div class="overlay">
   <div class="wrap">
+      <a class="brand" href="<?= esc_url(home_url('/')); ?>"><img class="logo" src="<?php bloginfo('template_directory'); ?>/dist/images/postfiftythree-logo-circle-grey-50.png" title="POSTFIFTYTHREE logo" /></a>
     <ul class="wrap-nav">
       <?php
         wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']);

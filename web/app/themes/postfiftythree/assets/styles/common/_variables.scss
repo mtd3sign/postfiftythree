@@ -29,6 +29,7 @@ $light : $grey-100;
 $medium : $grey-500;
 $dark : $grey-700;
 $highlight : $orange-A200;
+$highlight-100 : $orange-A100;
 
 $text-light : $grey-300;
 $text-medium : $grey-600;
@@ -40,6 +41,7 @@ $black : #000000;
 // Break Points & Screen Sizes
 
 $max-width : 1200px;
+$header-padding : 1240px;
 $break-small : 480px;
 $break-medium : 768px;
 $break-large : 1024px;
